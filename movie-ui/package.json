@@ -1,0 +1,25 @@
+{
+  "name": "movie_ui",
+  "private": true,
+  "dependencies": {
+    "@babel/core": "^7.17.2",
+    "@babel/preset-react": "^7.16.7",
+    "@rails/actioncable": "^7.0.1",
+    "@rails/activestorage": "^7.0.1",
+    "@rails/ujs": "^7.0.1",
+    "@rails/webpacker": "5.4.3",
+    "babel-loader": "^8.2.3",
+    "babel-plugin-transform-react-remove-prop-types": "^0.4.24",
+    "babel-preset-react": "^6.24.1",
+    "dotenv": "^16.0.0",
+    "prop-types": "^15.8.1",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react_ujs": "^2.6.1",
+    "turbolinks": "^5.2.0"
+  },
+  "version": "0.1.0",
+  "devDependencies": {
+    "webpack-dev-server": "^4.7.4"
+  }
+}

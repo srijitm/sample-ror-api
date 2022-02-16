@@ -1,0 +1,39 @@
+# NPM Stuff
+*.js
+!jest.config.js
+*.d.ts
+node_modules
+
+# CDK asset staging directory
+.cdk.staging
+cdk.out
+cdk.context.json
+
+build
+
+# Ignore bundler config.
+/.bundle
+
+# Ignore all logfiles and tempfiles.
+/log/*
+/tmp/*
+!/log/.keep
+!/tmp/.keep
+
+# Ignore pidfiles, but keep the directory.
+/tmp/pids/*
+!/tmp/pids/
+!/tmp/pids/.keep
+
+# Ignore uploaded files in development.
+/storage/*
+!/storage/.keep
+.byebug_history
+
+# Ignore master key for decrypting credentials and more.
+/config/master.key
+
+# OS stuff
+*.DS_Store
+.DS_Store
+

@@ -1,0 +1,20 @@
+# All DB details are passed in via environment variables
+
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  database: movie_api
+  host: <%= ENV['MOVIE_API_DATABASE_HOST'] %>
+  username: <%= ENV['MOVIE_API_DATABASE_USERNAME'] %>
+  password: <%= ENV['MOVIE_API_DATABASE_PASSWORD'] %>
+  port: <%= ENV['MOVIE_API_DATABASE_PORT'] %>
+
+development:
+  <<: *default
+
+test:
+  <<: *default
+
+production:
+  <<: *default
