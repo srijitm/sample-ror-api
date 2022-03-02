@@ -5,12 +5,11 @@ services:
     ports:
       - "3000:3000"
     environment:
-      - MOVIE_API_DATABASE_HOST=xxx
-      - MOVIE_API_DATABASE_USERNAME=postgres
-      - MOVIE_API_DATABASE_PASSWORD=xxx
-      - MOVIE_API_DATABASE_PORT=5432
-      - RAILS_SERVE_STATIC_FILES=true
-      - RAILS_MASTER_KEY=xxx
+      - MOVIE_API_DATABASE_HOST=#####
+      - MOVIE_API_DATABASE_USERNAME=#####
+      - MOVIE_API_DATABASE_PASSWORD=####
+      - MOVIE_API_DATABASE_PORT=####
+      - RAILS_MASTER_KEY=####
     healthcheck:
         test: ["CMD", "curl", "-f", "http://localhost:3000/api/movies"]
         interval: 30s
@@ -21,11 +20,11 @@ services:
     build: ./movie-ui
     ports:
       - "3001:3001"
-    # depends_on:
-    #   - movie-api
+    depends_on:
+      - movie-api
     environment:
       - REACT_APP_API_URL=http://localhost:3000
-      - RAILS_MASTER_KEY=xxx
+      - RAILS_MASTER_KEY=####
     healthcheck:
         test: ["CMD", "curl", "-f", "http://localhost:3001/"]
         interval: 30s

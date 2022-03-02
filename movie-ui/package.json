@@ -4,9 +4,12 @@
   "dependencies": {
     "@hotwired/stimulus": "^3.0.1",
     "@hotwired/turbo-rails": "^7.1.1",
-    "esbuild": "^0.14.23"
+    "esbuild": "^0.14.23",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "remount": "^0.11.0"
   },
   "scripts": {
-    "build": "./esbuild.js"
+    "build": "node ./esbuild.js"
   }
 }
