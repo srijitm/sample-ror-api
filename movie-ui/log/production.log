@@ -1,0 +1,34 @@
+W, [2022-03-02T13:22:08.595550 #54603]  WARN -- : You are running SQLite in production, this is generally not recommended. You can disable this warning by setting "config.active_record.sqlite3_production_warning=false".
+I, [2022-03-02T13:22:13.922922 #54603]  INFO -- : [15a0839d-3a80-4c53-95b4-0f740fbf6ae1] Started GET "/" for 127.0.0.1 at 2022-03-02 13:22:13 -0500
+I, [2022-03-02T13:22:13.924874 #54603]  INFO -- : [15a0839d-3a80-4c53-95b4-0f740fbf6ae1] Processing by MoviesController#index as HTML
+I, [2022-03-02T13:22:13.929950 #54603]  INFO -- : [15a0839d-3a80-4c53-95b4-0f740fbf6ae1]   Rendered movies/index.html.erb within layouts/application (Duration: 0.7ms | Allocations: 175)
+I, [2022-03-02T13:22:13.937257 #54603]  INFO -- : [15a0839d-3a80-4c53-95b4-0f740fbf6ae1]   Rendered layout layouts/application.html.erb (Duration: 8.1ms | Allocations: 1886)
+I, [2022-03-02T13:22:13.938232 #54603]  INFO -- : [15a0839d-3a80-4c53-95b4-0f740fbf6ae1] Completed 200 OK in 13ms (Views: 10.5ms | Allocations: 3149)
+W, [2022-03-02T13:42:13.965345 #57056]  WARN -- : You are running SQLite in production, this is generally not recommended. You can disable this warning by setting "config.active_record.sqlite3_production_warning=false".
+I, [2022-03-02T13:42:18.279188 #57056]  INFO -- : [e684cde4-7db5-414b-a958-18e7a47b3c53] Started GET "/" for 127.0.0.1 at 2022-03-02 13:42:18 -0500
+I, [2022-03-02T13:42:18.280922 #57056]  INFO -- : [e684cde4-7db5-414b-a958-18e7a47b3c53] Processing by MoviesController#index as HTML
+I, [2022-03-02T13:42:18.286056 #57056]  INFO -- : [e684cde4-7db5-414b-a958-18e7a47b3c53]   Rendered movies/index.html.erb within layouts/application (Duration: 0.8ms | Allocations: 175)
+I, [2022-03-02T13:42:18.293010 #57056]  INFO -- : [e684cde4-7db5-414b-a958-18e7a47b3c53]   Rendered layout layouts/application.html.erb (Duration: 7.8ms | Allocations: 1214)
+I, [2022-03-02T13:42:18.293920 #57056]  INFO -- : [e684cde4-7db5-414b-a958-18e7a47b3c53] Completed 200 OK in 13ms (Views: 10.2ms | Allocations: 2478)
+W, [2022-03-02T13:43:43.939495 #57303]  WARN -- : You are running SQLite in production, this is generally not recommended. You can disable this warning by setting "config.active_record.sqlite3_production_warning=false".
+I, [2022-03-02T13:43:47.118747 #57303]  INFO -- : [1f4ec2f0-1182-4d7f-9002-636eb259d179] Started GET "/" for 127.0.0.1 at 2022-03-02 13:43:47 -0500
+I, [2022-03-02T13:43:47.120269 #57303]  INFO -- : [1f4ec2f0-1182-4d7f-9002-636eb259d179] Processing by MoviesController#index as HTML
+I, [2022-03-02T13:43:47.124121 #57303]  INFO -- : [1f4ec2f0-1182-4d7f-9002-636eb259d179]   Rendered movies/index.html.erb within layouts/application (Duration: 0.6ms | Allocations: 175)
+I, [2022-03-02T13:43:47.128942 #57303]  INFO -- : [1f4ec2f0-1182-4d7f-9002-636eb259d179]   Rendered layout layouts/application.html.erb (Duration: 5.5ms | Allocations: 1211)
+I, [2022-03-02T13:43:47.129211 #57303]  INFO -- : [1f4ec2f0-1182-4d7f-9002-636eb259d179] Completed 200 OK in 9ms (Views: 7.0ms | Allocations: 2475)
+I, [2022-03-02T13:43:48.995512 #57303]  INFO -- : [1e59d13c-ad6f-4ec7-9127-67f81fc0f219] Started GET "/" for 127.0.0.1 at 2022-03-02 13:43:48 -0500
+I, [2022-03-02T13:43:48.997053 #57303]  INFO -- : [1e59d13c-ad6f-4ec7-9127-67f81fc0f219] Processing by MoviesController#index as HTML
+I, [2022-03-02T13:43:48.997877 #57303]  INFO -- : [1e59d13c-ad6f-4ec7-9127-67f81fc0f219]   Rendered movies/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 4)
+I, [2022-03-02T13:43:48.998929 #57303]  INFO -- : [1e59d13c-ad6f-4ec7-9127-67f81fc0f219]   Rendered layout layouts/application.html.erb (Duration: 1.2ms | Allocations: 394)
+I, [2022-03-02T13:43:48.999157 #57303]  INFO -- : [1e59d13c-ad6f-4ec7-9127-67f81fc0f219] Completed 200 OK in 2ms (Views: 1.7ms | Allocations: 614)
+I, [2022-03-02T13:43:49.552185 #57303]  INFO -- : [fbdb983f-d1c3-449a-8a73-2034d0ca8cc7] Started GET "/" for 127.0.0.1 at 2022-03-02 13:43:49 -0500
+I, [2022-03-02T13:43:49.552926 #57303]  INFO -- : [fbdb983f-d1c3-449a-8a73-2034d0ca8cc7] Processing by MoviesController#index as HTML
+I, [2022-03-02T13:43:49.553521 #57303]  INFO -- : [fbdb983f-d1c3-449a-8a73-2034d0ca8cc7]   Rendered movies/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 4)
+I, [2022-03-02T13:43:49.554250 #57303]  INFO -- : [fbdb983f-d1c3-449a-8a73-2034d0ca8cc7]   Rendered layout layouts/application.html.erb (Duration: 0.8ms | Allocations: 382)
+I, [2022-03-02T13:43:49.554448 #57303]  INFO -- : [fbdb983f-d1c3-449a-8a73-2034d0ca8cc7] Completed 200 OK in 1ms (Views: 1.1ms | Allocations: 583)
+W, [2022-03-02T14:05:01.200708 #59252]  WARN -- : You are running SQLite in production, this is generally not recommended. You can disable this warning by setting "config.active_record.sqlite3_production_warning=false".
+I, [2022-03-02T14:05:05.876860 #59252]  INFO -- : [f7b61936-ec2b-4d77-92e1-6971aa81e5d0] Started GET "/" for 127.0.0.1 at 2022-03-02 14:05:05 -0500
+I, [2022-03-02T14:05:05.878925 #59252]  INFO -- : [f7b61936-ec2b-4d77-92e1-6971aa81e5d0] Processing by MoviesController#index as HTML
+I, [2022-03-02T14:05:05.885066 #59252]  INFO -- : [f7b61936-ec2b-4d77-92e1-6971aa81e5d0]   Rendered movies/index.html.erb within layouts/application (Duration: 0.8ms | Allocations: 175)
+I, [2022-03-02T14:05:05.891169 #59252]  INFO -- : [f7b61936-ec2b-4d77-92e1-6971aa81e5d0]   Rendered layout layouts/application.html.erb (Duration: 6.4ms | Allocations: 1085)
+I, [2022-03-02T14:05:05.891589 #59252]  INFO -- : [f7b61936-ec2b-4d77-92e1-6971aa81e5d0] Completed 200 OK in 12ms (Views: 9.5ms | Allocations: 2349)
