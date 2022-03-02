@@ -63,9 +63,7 @@ This makes it very easy to integrate the solution within your CICD platform.
 
 #### Movie Sample 
 
-##### Rails 6 environment
-
-Run these steps for both movie-api and movie-infra:
+##### Movie API
 
 1. Generate a new secret by running rake secret copy the output
 ```sh
@@ -80,7 +78,7 @@ EDITOR="vim" bin/rails credentials:edit --environment production
 
 This command will generate the production master key and encoded credentials in config\credentials. 
 
-3. Store the value in 'production.key' as a secret in AWS ParameterStore and pass it to the container as an environment variable.Create a secure string parameter called: /acme/demo/[api|ui]/movie/key 
+3. Store the value in 'production.key' as a secret in AWS ParameterStore and pass it to the container as an environment variable.Create a secure string parameter called: /acme/demo/api/movie/key 
 
 4. Create and seed the Postgres DB. Look at the docker-compose.yml file and export the necessary env vars.
 
@@ -90,8 +88,75 @@ bin/rake db:create
 bin/rake db:migrate
 bin/rake db:seed
 ```
+5. To test locally
 
-5. For movie-ui first export SECRET_KEY_BASE. See config/secrets.yml
+```sh
+export MOVIE_API_DATABASE_USERNAME=postgres
+export MOVIE_API_DATABASE_PASSWORD=########
+export MOVIE_API_DATABASE_PORT=5432
+export RAILS_SERVE_STATIC_FILES=true
+export RAILS_MASTER_KEY=########
+
+RACK_ENV=production bundle exec rails s -b 0.0.0.0 -p 3000
+```
+
+Validate by visiting [http://localhost:3000/api/movies](http://localhost:3000/api/movies)
+
+##### Movie UI
+
+1. Generate a new secret by running rake secret copy the output
+```sh
+rake secret
+```
+
+2. Setup credentials by running. Add the value from step 1 as the value of the 'secret_key_base' key in the file.
+
+```sh
+EDITOR="vim" bin/rails credentials:edit --environment production
+```
+
+This command will generate the production master key and encoded credentials in config\credentials. 
+
+3. Store the value in 'production.key' as a secret in AWS ParameterStore and pass it to the container as an environment variable.Create a secure string parameter called: /acme/demo/ui/movie/key 
+
+4. For movie-ui export SECRET_KEY_BASE. See config/secrets.yml
+
+5. Run
+```sh
+./bin/rails javascript:install:esbuild    
+```
+6. To test locally
+
+```sh
+export REACT_APP_API_URL=http://localhost:3000
+export RAILS_MASTER_KEY=########
+
+RACK_ENV=production bundle exec rails s -b 0.0.0.0 -p 3001
+```
+Validate by visiting [http://localhost:3001/](http://localhost:3001/)
+
+### Docker Compose
+
+In case you want to test this locally a docker-compose file is provided.
+
+Set these values in [docker-compose.yml](./docker-compose.yml)
+
+```sh
+  - MOVIE_API_DATABASE_HOST=xxxxxx
+  - MOVIE_API_DATABASE_USERNAME=xxxxxx
+  - MOVIE_API_DATABASE_PASSWORD=xxxxxx
+  - MOVIE_API_DATABASE_PORT=xxxxxx
+  - RAILS_SERVE_STATIC_FILES=true
+```
+
+Start the containers:
+
+```sh
+docker-compose up
+```
+
+Test the API by visiting [http://localhost:3000/api/movies](http://localhost:3000/api/movies)
+Test the UI by visiting [http://localhost:3001/](http://localhost:3001/)
 
 ##### Movie API infrastructure
 
@@ -137,25 +202,3 @@ run npm build
 cdk deploy
 ```
 
-### Local Testing
-
-In case you want to test this locally a docker-compose file is provided.
-
-Set these values in [docker-compose.yml](./docker-compose.yml)
-
-```sh
-  - MOVIE_API_DATABASE_HOST=xxxxxx
-  - MOVIE_API_DATABASE_USERNAME=xxxxxx
-  - MOVIE_API_DATABASE_PASSWORD=xxxxxx
-  - MOVIE_API_DATABASE_PORT=xxxxxx
-  - RAILS_SERVE_STATIC_FILES=true
-```
-
-Start the containers:
-
-```sh
-docker-compose up
-```
-
-Test the API by visiting [http://localhost:3000/api/movies](http://localhost:3000/api/movies)
-Test the UI by visiting [http://localhost:3001/](http://localhost:3001/)
