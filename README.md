@@ -33,8 +33,10 @@ On AWS the DB values and API endpoint are stored in Parameter Store. ECS automat
 
 ***Only tested on macOS***
 
-* Rails 6.0.3.1
-* ruby 2.7.1p83
+* Rails 7.0.2.2
+* ruby 3.1.0p0 (2021-12-25 revision fb4df44d16) [x86_64-darwin21]
+* node v16.5.0
+* npm 8.5.0
 * Docker
 * Docker compose
 * AWS CDK
