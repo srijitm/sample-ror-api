@@ -12,6 +12,8 @@
 /tmp/*
 !/log/.keep
 !/tmp/.keep
+/public/assets/*
+/public/assets/
 
 # Ignore pidfiles, but keep the directory.
 /tmp/pids/*
